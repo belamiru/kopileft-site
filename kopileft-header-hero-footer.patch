@@ -1,0 +1,409 @@
+diff --git a/index.html b/index.html
+index cfc90aa..68ebcfb 100644
+--- a/index.html
++++ b/index.html
+@@ -23,16 +23,24 @@
+         <img src="images/logo.png" alt="Копилефт — типография в Воронеже">
+       </a>
+ 
+-      <nav class="main-nav" aria-label="Основная навигация">
+-        <a href="#services">Услуги</a>
+-        <a href="nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-        <a href="shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-        <a href="tipographiya/">Полиграфия</a>
++            <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="tipographiya/">Полиграфия</a>
++            <a href="tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="#works">Примеры работ</a>
++        <a href="#prepress">Требования к макетам</a>
++        <a href="#delivery">Доставка и оплата</a>
+         <a href="#contacts">Контакты</a>
+       </nav>
+ 
+       <div class="header-actions">
+-        <span class="location">📍 Воронеж</span>
+         <a class="button button-yellow" href="#calculator">
+           Рассчитать заказ
+         </a>
+@@ -111,51 +119,10 @@
+         <h2>Что печатаем</h2>
+ 
+         <div class="service-grid">
+-
+-          <article class="service-card">
+-            <div class="service-image service-image-stickers"></div>
+-            <div class="service-card-content">
+-              <h3>Печать наклеек и этикеток</h3>
+-              <p>
+-                Белая, прозрачная, голографическая, золотая
+-                и серебряная плёнка. Контурная резка любой формы
+-                входит в стоимость.
+-              </p>
+-              <a class="button button-yellow" href="#calculator">
+-                Рассчитать стоимость <span>→</span>
+-              </a>
+-            </div>
+-          </article>
+-
+-          <article class="service-card">
+-            <div class="service-image service-image-wide"></div>
+-            <div class="service-card-content">
+-              <h3>Широкоформатная УФ-печать</h3>
+-              <p>
+-                Баннеры, плакаты, бэклиты и печать
+-                на самоклеящейся плёнке. Максимальная ширина —
+-                1,6 м.
+-              </p>
+-              <a class="button button-white" href="#contacts">
+-                Подробнее <span>→</span>
+-              </a>
+-            </div>
+-          </article>
+-
+-          <article class="service-card">
+-            <div class="service-image service-image-riso"></div>
+-            <div class="service-card-content">
+-              <h3>Ризография</h3>
+-              <p>
+-                Печать небольших и средних тиражей
+-                для бизнеса.
+-              </p>
+-              <a class="button button-white" href="#contacts">
+-                Подробнее <span>→</span>
+-              </a>
+-            </div>
+-          </article>
+-
++          <article class="service-card"><div class="service-image service-image-stickers"></div><div class="service-card-content"><h3>Наклейки и этикетки</h3><p>Печать на белой, прозрачной, металлизированной и голографической плёнке, этикетки для товаров и упаковки, контурная резка.</p><a class="button button-yellow" href="nakleiki-iz-vinilovoi-plenki/">Подробнее <span>→</span></a></div></article>
++          <article class="service-card"><div class="service-image service-image-wide"></div><div class="service-card-content"><h3>Широкоформатная печать</h3><p>Баннеры, плакаты, бэклиты, печать на самоклеящейся плёнке, наклейки на авто и плоттерная резка. Максимальная ширина — 1,6 м.</p><a class="button button-white" href="shirokoformatnaya-pechat/">Подробнее <span>→</span></a></div></article>
++          <article class="service-card"><div class="service-image service-image-riso"></div><div class="service-card-content"><h3>Полиграфия</h3><p>Ризография и другие печатные материалы для бизнеса: небольшие и средние тиражи, листовки, объявления и раздаточные материалы.</p><a class="button button-white" href="tipographiya/">Подробнее <span>→</span></a></div></article>
++          <article class="service-card"><div class="service-image service-image-wide"></div><div class="service-card-content"><h3>Пластиковые таблички</h3><p>Информационные, навигационные и рабочие таблички для помещений, фасадов и торговых точек.</p><a class="button button-white" href="tablichki-plastikovye/">Подробнее <span>→</span></a></div></article>
+         </div>
+       </div>
+     </section>
+@@ -216,7 +183,7 @@
+     </section>
+ 
+     <!-- Для бизнеса -->
+-    <section class="section" id="works">
++    <section class="section" id="applications">
+       <div class="container">
+ 
+         <h2>Для чего бизнесу нужны наклейки и этикетки</h2>
+@@ -300,6 +267,9 @@
+       </div>
+     </section>
+ 
++    <section class="section" id="works"><div class="container"><h2>Примеры работ</h2><div class="info-grid"><article class="info-card"><h3>Наклейки и этикетки</h3><p>Брендирование упаковки, товарные этикетки, QR-коды и маркировка продукции.</p></article><article class="info-card"><h3>Рекламная печать</h3><p>Плакаты, баннеры, материалы для оформления торговых точек и мероприятий.</p></article><article class="info-card"><h3>Материалы для бизнеса</h3><p>Листовки, объявления, таблички и другие печатные материалы под задачу компании.</p></article></div></div></section>
++    <section class="section section-muted" id="prepress"><div class="container info-columns"><div><p class="eyebrow">ПОДГОТОВКА ФАЙЛОВ</p><h2>Требования к макетам</h2></div><div><p>Пришлите готовый макет в PDF, AI, CDR или другом согласованном формате. Для печати нужен вылет под обрез, шрифты — в кривых, изображения — в хорошем разрешении.</p><p>Если макета нет или есть сомнения в файле, отправьте материалы нам — проверим и подскажем, что исправить.</p></div></div></section>
++    <section class="section" id="delivery"><div class="container info-columns"><div><p class="eyebrow">ЗАКАЗ И ПОЛУЧЕНИЕ</p><h2>Доставка и оплата</h2></div><div><p>Согласуем задачу, тираж, сроки и способ получения до запуска в работу. Оплата — по согласованию, для организаций подготовим документы.</p><p>Забрать заказ можно в Воронеже. Также отправляем заказы через Ozon и Яндекс Go; условия доставки уточняются при оформлении.</p></div></div></section>
+     <!-- Финальный призыв -->
+     <section class="final-cta" id="contacts">
+       <div class="container final-cta-inner">
+@@ -341,7 +311,7 @@
+   <footer class="site-footer">
+     <div class="container footer-inner">
+       <a class="footer-logo" href="/">
+-        <img src="images/logo.png" alt="Копилефт">
++        <img src="images/logo-wh.png" alt="Копилефт">
+       </a>
+       <span>Типография в Воронеже</span>
+     </div>
+diff --git a/nakleiki-iz-vinilovoi-plenki/index.html b/nakleiki-iz-vinilovoi-plenki/index.html
+index b7e05bf..b8a69e0 100644
+--- a/nakleiki-iz-vinilovoi-plenki/index.html
++++ b/nakleiki-iz-vinilovoi-plenki/index.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+@@ -15,13 +15,22 @@
+       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
+     </a>
+ 
+-    <nav class="main-nav" aria-label="Основная навигация">
+-      <a href="../#services">Услуги</a>
+-      <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-      <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-      <a href="../tipographiya/">Полиграфия</a>
+-      <a href="../#contacts">Контакты</a>
+-    </nav>
++          <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="../nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="../tipographiya/">Полиграфия</a>
++            <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="../#works">Примеры работ</a>
++        <a href="../#prepress">Требования к макетам</a>
++        <a href="../#delivery">Доставка и оплата</a>
++        <a href="../#contacts">Контакты</a>
++      </nav>
+ 
+     <a class="button button-yellow" href="../#calculator">
+       Рассчитать заказ
+@@ -45,7 +54,7 @@
+ <footer class="site-footer">
+   <div class="container footer-inner">
+     <a class="footer-logo" href="../">
+-      <img src="../images/logo.png" alt="Копилефт">
++      <img src="../images/logo-wh.png" alt="Копилефт">
+     </a>
+     <span>Типография в Воронеже</span>
+   </div>
+diff --git a/nakleiki-na-avto/index.html b/nakleiki-na-avto/index.html
+index 178e4bf..1b0984c 100644
+--- a/nakleiki-na-avto/index.html
++++ b/nakleiki-na-avto/index.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+@@ -15,13 +15,22 @@
+       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
+     </a>
+ 
+-    <nav class="main-nav" aria-label="Основная навигация">
+-      <a href="../#services">Услуги</a>
+-      <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-      <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-      <a href="../tipographiya/">Полиграфия</a>
+-      <a href="../#contacts">Контакты</a>
+-    </nav>
++          <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="../nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="../tipographiya/">Полиграфия</a>
++            <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="../#works">Примеры работ</a>
++        <a href="../#prepress">Требования к макетам</a>
++        <a href="../#delivery">Доставка и оплата</a>
++        <a href="../#contacts">Контакты</a>
++      </nav>
+ 
+     <a class="button button-yellow" href="../#calculator">
+       Рассчитать заказ
+@@ -45,7 +54,7 @@
+ <footer class="site-footer">
+   <div class="container footer-inner">
+     <a class="footer-logo" href="../">
+-      <img src="../images/logo.png" alt="Копилефт">
++      <img src="../images/logo-wh.png" alt="Копилефт">
+     </a>
+     <span>Типография в Воронеже</span>
+   </div>
+diff --git a/script.js b/script.js
+index e69de29..11c07b9 100644
+--- a/script.js
++++ b/script.js
+@@ -0,0 +1,9 @@
++
++
++document.querySelectorAll('.nav-dropdown-toggle').forEach((serviceMenuToggle) => {
++  serviceMenuToggle.addEventListener('click', () => {
++    const dropdown = serviceMenuToggle.closest('.nav-dropdown');
++    const open = dropdown.classList.toggle('is-open');
++    serviceMenuToggle.setAttribute('aria-expanded', String(open));
++  });
++});
+diff --git a/shirokoformatnaya-pechat/index.html b/shirokoformatnaya-pechat/index.html
+index 5317a86..325862b 100644
+--- a/shirokoformatnaya-pechat/index.html
++++ b/shirokoformatnaya-pechat/index.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+@@ -15,13 +15,22 @@
+       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
+     </a>
+ 
+-    <nav class="main-nav" aria-label="Основная навигация">
+-      <a href="../#services">Услуги</a>
+-      <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-      <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-      <a href="../tipographiya/">Полиграфия</a>
+-      <a href="../#contacts">Контакты</a>
+-    </nav>
++          <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="../nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="../tipographiya/">Полиграфия</a>
++            <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="../#works">Примеры работ</a>
++        <a href="../#prepress">Требования к макетам</a>
++        <a href="../#delivery">Доставка и оплата</a>
++        <a href="../#contacts">Контакты</a>
++      </nav>
+ 
+     <a class="button button-yellow" href="../#calculator">
+       Рассчитать заказ
+@@ -45,7 +54,7 @@
+ <footer class="site-footer">
+   <div class="container footer-inner">
+     <a class="footer-logo" href="../">
+-      <img src="../images/logo.png" alt="Копилефт">
++      <img src="../images/logo-wh.png" alt="Копилефт">
+     </a>
+     <span>Типография в Воронеже</span>
+   </div>
+diff --git a/styles.css b/styles.css
+index 1a20788..46b3ed2 100644
+--- a/styles.css
++++ b/styles.css
+@@ -268,6 +268,7 @@ input {
+   min-height: 500px;
+   overflow: hidden;
+   border-radius: 34px;
++  background: #d6d6db;
+ }
+ 
+ .hero-image::after {
+@@ -794,3 +795,18 @@ input {
+     width: 125px;
+   }
+ }
++
++
++/* Выпадающее меню и информационные блоки */
++.nav-dropdown { position: relative; }
++.nav-dropdown-toggle { display: inline-flex; align-items: center; border: 0; padding: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; white-space: nowrap; }
++.nav-dropdown-menu { position: absolute; top: 100%; padding-top: 14px; left: -14px; display: none; min-width: 235px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
++.nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: grid; }
++.nav-dropdown-menu a { padding: 10px 12px; border-radius: 9px; }
++.nav-dropdown-menu a:hover { background: var(--soft); opacity: 1; }
++.info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
++.info-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--white); }
++.info-card h3 { margin-top: 0; }
++.info-columns { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: start; }
++.section-muted { background: var(--soft); }
++@media (max-width: 800px) { .nav-dropdown-menu { position: static; min-width: 0; margin: 0 0 8px; box-shadow: none; } .nav-dropdown-toggle { width: 100%; padding: 13px 10px; text-align: left; } .nav-dropdown { border-bottom: 1px solid var(--line); } .info-grid, .info-columns { grid-template-columns: 1fr; gap: 18px; } }
+diff --git a/tablichki-plastikovye/index.html b/tablichki-plastikovye/index.html
+index 3fa5054..bd10fd5 100644
+--- a/tablichki-plastikovye/index.html
++++ b/tablichki-plastikovye/index.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+@@ -15,13 +15,22 @@
+       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
+     </a>
+ 
+-    <nav class="main-nav" aria-label="Основная навигация">
+-      <a href="../#services">Услуги</a>
+-      <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-      <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-      <a href="../tipographiya/">Полиграфия</a>
+-      <a href="../#contacts">Контакты</a>
+-    </nav>
++          <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="../nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="../tipographiya/">Полиграфия</a>
++            <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="../#works">Примеры работ</a>
++        <a href="../#prepress">Требования к макетам</a>
++        <a href="../#delivery">Доставка и оплата</a>
++        <a href="../#contacts">Контакты</a>
++      </nav>
+ 
+     <a class="button button-yellow" href="../#calculator">
+       Рассчитать заказ
+@@ -45,7 +54,7 @@
+ <footer class="site-footer">
+   <div class="container footer-inner">
+     <a class="footer-logo" href="../">
+-      <img src="../images/logo.png" alt="Копилефт">
++      <img src="../images/logo-wh.png" alt="Копилефт">
+     </a>
+     <span>Типография в Воронеже</span>
+   </div>
+diff --git a/tipographiya/index.html b/tipographiya/index.html
+index af5915a..5670f44 100644
+--- a/tipographiya/index.html
++++ b/tipographiya/index.html
+@@ -1,4 +1,4 @@
+-﻿<!DOCTYPE html>
++<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+   <meta charset="UTF-8">
+@@ -15,13 +15,22 @@
+       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
+     </a>
+ 
+-    <nav class="main-nav" aria-label="Основная навигация">
+-      <a href="../#services">Услуги</a>
+-      <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки</a>
+-      <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
+-      <a href="../tipographiya/">Полиграфия</a>
+-      <a href="../#contacts">Контакты</a>
+-    </nav>
++          <nav class="main-nav" aria-label="Основная навигация">
++        <div class="nav-dropdown">
++          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги</button>
++          <div class="nav-dropdown-menu">
++            <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
++            <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
++            <a href="../nakleiki-na-avto/">Наклейки на авто</a>
++            <a href="../tipographiya/">Полиграфия</a>
++            <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
++          </div>
++        </div>
++        <a href="../#works">Примеры работ</a>
++        <a href="../#prepress">Требования к макетам</a>
++        <a href="../#delivery">Доставка и оплата</a>
++        <a href="../#contacts">Контакты</a>
++      </nav>
+ 
+     <a class="button button-yellow" href="../#calculator">
+       Рассчитать заказ
+@@ -45,7 +54,7 @@
+ <footer class="site-footer">
+   <div class="container footer-inner">
+     <a class="footer-logo" href="../">
+-      <img src="../images/logo.png" alt="Копилефт">
++      <img src="../images/logo-wh.png" alt="Копилефт">
+     </a>
+     <span>Типография в Воронеже</span>
+   </div>
