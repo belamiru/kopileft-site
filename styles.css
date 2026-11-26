@@ -765,3 +765,32 @@ input {
     flex-direction: column;
   }
 }
+
+/* Логотип в шапке и подвале */
+.logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+.footer-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 42px;
+  object-fit: contain;
+}
+
+@media (max-width: 520px) {
+  .logo img,
+  .footer-logo img {
+    width: 125px;
+  }
+}
