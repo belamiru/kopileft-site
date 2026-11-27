@@ -1,9 +1,9 @@
 // Добавляйте сюда фотографии из images/works в нужном порядке.
 const workPhotos = [
-  'work-01.jpg', 'work-02.jpg', 'work-03.jpg', 'work-04.jpg',
-  'work-05.jpg', 'work-06.jpg', 'work-07.jpg', 'work-08.jpg',
-  'work-09.jpg', 'work-10.jpg', 'work-11.jpg', 'work-12.jpg',
-  'work-13.jpg', 'work-14.jpg', 'work-15.jpg', 'work-16.jpg'
+  'work-01.JPG', 'work-02.JPG', 'work-03.JPG', 'work-04.JPG',
+  'work-05.JPG', 'work-06.JPG', 'work-07.JPG', 'work-08.JPG',
+  'work-09.JPG', 'work-10.JPG', 'work-11.JPG', 'work-12.JPG',
+  'work-13.JPG', 'work-14.JPG', 'work-15.JPG', 'work-16.JPG'
 ];
 const grid = document.getElementById('works-grid');
 const more = document.getElementById('works-more');
