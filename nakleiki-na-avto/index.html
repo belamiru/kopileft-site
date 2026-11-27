@@ -15,9 +15,9 @@
       <img src="../images/logo.png" alt="Копилефт — типография в Воронеже">
     </a>
 
-          <nav class="main-nav" aria-label="Основная навигация">
+          <nav id="main-navigation" class="main-nav" aria-label="Основная навигация">
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги <span>⌄</span></button>
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги <span aria-hidden="true">▾</span></button>
           <div class="nav-dropdown-menu">
             <a href="../nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
             <a href="../shirokoformatnaya-pechat/">Широкоформатная печать</a>
@@ -26,13 +26,14 @@
             <a href="../tablichki-plastikovye/">Пластиковые таблички</a>
           </div>
         </div>
-        <a href="../#business">Для бизнеса</a>
+
         <a href="../#works">Примеры работ</a>
         <a href="../#prepress">Требования к макетам</a>
         <a href="../#delivery">Доставка и оплата</a>
         <a href="../#contacts">Контакты</a>
       </nav>
 
+    <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">☰</button>
     <a class="button button-yellow" href="../#calculator">
       Рассчитать заказ
     </a>
@@ -55,11 +56,12 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <a class="footer-logo" href="../">
-      <img src="../images/logo.png" alt="Копилефт">
+      <img src="../images/logo-wh.png" alt="Копилефт">
     </a>
     <span>Типография в Воронеже</span>
   </div>
 </footer>
 
+<script src="../script.js"></script>
 </body>
 </html>

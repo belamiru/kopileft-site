@@ -12,6 +12,7 @@
   >
 
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="works-gallery.css">
 </head>
 
 <body>
@@ -23,9 +24,9 @@
         <img src="images/logo.png" alt="Копилефт — типография в Воронеже">
       </a>
 
-            <nav class="main-nav" aria-label="Основная навигация">
+            <nav id="main-navigation" class="main-nav" aria-label="Основная навигация">
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги <span>⌄</span></button>
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false">Услуги <span aria-hidden="true">▾</span></button>
           <div class="nav-dropdown-menu">
             <a href="nakleiki-iz-vinilovoi-plenki/">Наклейки и этикетки</a>
             <a href="shirokoformatnaya-pechat/">Широкоформатная печать</a>
@@ -34,7 +35,7 @@
             <a href="tablichki-plastikovye/">Пластиковые таблички</a>
           </div>
         </div>
-        <a href="#business">Для бизнеса</a>
+
         <a href="#works">Примеры работ</a>
         <a href="#prepress">Требования к макетам</a>
         <a href="#delivery">Доставка и оплата</a>
@@ -42,11 +43,11 @@
       </nav>
 
       <div class="header-actions">
-        <span class="location">📍 Воронеж</span>
+
         <a class="button button-yellow" href="#calculator">
           Рассчитать заказ
         </a>
-        <button class="menu-button" type="button" aria-label="Открыть меню">
+        <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-navigation">
           ☰
         </button>
       </div>
@@ -236,32 +237,32 @@
 
         <div class="steps-grid">
           <div class="step">
-            <span>1</span>
+            <img class="step-image" src="images/order/calculate.png" alt="" width="64" height="64">
             <p>Рассчитайте стоимость</p>
           </div>
 
           <div class="step">
-            <span>2</span>
+            <img class="step-image" src="images/order/message.png" alt="" width="64" height="64">
             <p>Напишите нам в Telegram или MAX</p>
           </div>
 
           <div class="step">
-            <span>3</span>
+            <img class="step-image" src="images/order/layout.png" alt="" width="64" height="64">
             <p>Согласуйте детали и макет</p>
           </div>
 
           <div class="step">
-            <span>4</span>
+            <img class="step-image" src="images/order/payment.png" alt="" width="64" height="64">
             <p>Оплатите удобным способом</p>
           </div>
 
           <div class="step">
-            <span>5</span>
+            <img class="step-image" src="images/order/production.png" alt="" width="64" height="64">
             <p>Дождитесь изготовления</p>
           </div>
 
           <div class="step">
-            <span>6</span>
+            <img class="step-image" src="images/order/delivery.png" alt="" width="64" height="64">
             <p>Получите заказ</p>
           </div>
         </div>
@@ -269,7 +270,18 @@
       </div>
     </section>
 
-    <section class="section" id="works"><div class="container"><h2>Примеры работ</h2><div class="info-grid"><article class="info-card"><h3>Наклейки и этикетки</h3><p>Брендирование упаковки, товарные этикетки, QR-коды и маркировка продукции.</p></article><article class="info-card"><h3>Рекламная печать</h3><p>Плакаты, баннеры, материалы для оформления торговых точек и мероприятий.</p></article><article class="info-card"><h3>Материалы для бизнеса</h3><p>Листовки, объявления, таблички и другие печатные материалы под задачу компании.</p></article></div></div></section>
+    <section class="section" id="works">
+  <div class="container">
+    <h2>Примеры работ</h2>
+    <div class="works-grid" id="works-grid"></div>
+    <p id="works-empty" hidden>Фотографии скоро появятся.</p>
+    <div class="works-actions">
+      <button class="button button-white" id="works-more" type="button" hidden>Показать ещё</button>
+      <p id="works-end" role="status" hidden>К сожалению, фотографий больше нет. В конце концов мы типография, а не фотографы.</p>
+    </div>
+    <noscript>Для просмотра галереи включите JavaScript.</noscript>
+  </div>
+</section>
     <section class="section section-muted" id="prepress"><div class="container info-columns"><div><p class="eyebrow">ПОДГОТОВКА ФАЙЛОВ</p><h2>Требования к макетам</h2></div><div><p>Пришлите готовый макет в PDF, AI, CDR или другом согласованном формате. Для печати нужен вылет под обрез, шрифты — в кривых, изображения — в хорошем разрешении.</p><p>Если макета нет или есть сомнения в файле, отправьте материалы нам — проверим и подскажем, что исправить.</p></div></div></section>
     <section class="section" id="delivery"><div class="container info-columns"><div><p class="eyebrow">ЗАКАЗ И ПОЛУЧЕНИЕ</p><h2>Доставка и оплата</h2></div><div><p>Согласуем задачу, тираж, сроки и способ получения до запуска в работу. Оплата — по согласованию, для организаций подготовим документы.</p><p>Забрать заказ можно в Воронеже. Также отправляем заказы через Ozon и Яндекс Go; условия доставки уточняются при оформлении.</p></div></div></section>
     <!-- Финальный призыв -->
@@ -313,12 +325,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <a class="footer-logo" href="/">
-        <img src="images/logo.png" alt="Копилефт">
+        <img src="images/logo-wh.png" alt="Копилефт">
       </a>
       <span>Типография в Воронеже</span>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script src="works-gallery.js" defer></script>
 </body>
 </html>

@@ -206,9 +206,7 @@ input {
 .hero {
   overflow: hidden;
   padding: 68px 0 75px;
-  background:
-    radial-gradient(circle at 92% 20%, rgba(255, 229, 0, 0.16), transparent 22%),
-    linear-gradient(135deg, #fff 0%, #f7f7fb 100%);
+  background: #d6d6db;
 }
 
 .hero-grid {
@@ -268,6 +266,7 @@ input {
   min-height: 500px;
   overflow: hidden;
   border-radius: 34px;
+  background: #d6d6db;
 }
 
 .hero-image::after {
@@ -800,8 +799,9 @@ input {
 .nav-dropdown { position: relative; }
 .nav-dropdown-toggle { border: 0; padding: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; white-space: nowrap; }
 .nav-dropdown-toggle span { margin-left: 4px; }
-.nav-dropdown-menu { position: absolute; top: calc(100% + 14px); left: -14px; display: none; min-width: 235px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
-.nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu, .nav-dropdown.is-open .nav-dropdown-menu { display: grid; }
+.nav-dropdown-menu { position: absolute; top: 100%; left: -14px; display: none; min-width: 235px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: var(--white); box-shadow: 0 12px 30px rgba(0,0,0,.12); }
+.nav-dropdown.is-open .nav-dropdown-menu { display: grid; }
+@media (hover: hover) and (pointer: fine) { .nav-dropdown:hover .nav-dropdown-menu { display: grid; } }
 .nav-dropdown-menu a { padding: 10px 12px; border-radius: 9px; }
 .nav-dropdown-menu a:hover { background: var(--soft); opacity: 1; }
 .info-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -810,3 +810,13 @@ input {
 .info-columns { display: grid; grid-template-columns: .8fr 1.2fr; gap: 60px; align-items: start; }
 .section-muted { background: var(--soft); }
 @media (max-width: 800px) { .nav-dropdown-menu { position: static; min-width: 0; margin: 0 0 8px; box-shadow: none; } .nav-dropdown-toggle { width: 100%; padding: 13px 10px; text-align: left; } .nav-dropdown { border-bottom: 1px solid var(--line); } .info-grid, .info-columns { grid-template-columns: 1fr; gap: 18px; } }
+
+@media (max-width: 800px) { .header-inner > .menu-button { margin-left: auto; } .header-inner > .button { display: none; } }
+
+/* order-step-icons */
+.step-image { display: block; width: 64px; height: 64px; object-fit: contain; margin: 0 auto 16px; }
+.step:not(:last-child)::after { top: 32px; }
+@media (max-width: 520px) {
+  .step { grid-template-columns: 64px 1fr; }
+  .step-image { margin: 0; }
+}

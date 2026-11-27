@@ -1,0 +1,7 @@
+.works-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.works-grid img { display: block; width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 16px; }
+.works-grid img[hidden], .works-actions [hidden], #works-empty[hidden] { display: none; }
+.works-actions { margin-top: 24px; }
+.works-actions p { color: #626262; }
+@media (max-width: 800px) { .works-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 420px) { .works-grid { gap: 10px; } }
